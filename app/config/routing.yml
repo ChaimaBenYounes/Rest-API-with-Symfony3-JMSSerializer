@@ -1,0 +1,20 @@
+api_my_rest:
+    resource: "@APIMyRestBundle/Resources/config/routing.yml"
+    prefix:   /
+
+api_new_categories:
+    path:      /categories
+    defaults: { _controller:APIMyRestBundle:Category:new }
+    methods:  [POST]
+
+api_list_categories:
+    path:      /categories
+    defaults: { _controller:APIMyRestBundle:Category:list }
+    methods:  [GET]
+ 
+api_show_categories:
+    path:      /categories/{id}
+    defaults: { _controller:APIMyRestBundle:Category:show }
+    methods:  [GET]
+
+
